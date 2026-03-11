@@ -1,6 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { fizzbuzz } from "./fizzbuzz";
+import { fizzbuzz } from "../src/fizzbuzz";
 
 describe("fizzbuzz", () => {
-  // tests go here
+  it("returns the number as string for 1", () => {
+    expect(fizzbuzz(1)).toBe("1");
+    });
 });
