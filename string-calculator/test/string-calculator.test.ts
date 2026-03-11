@@ -10,4 +10,8 @@ describe("add", () => {
 		expect(add("1")).toBe(1)
 		expect(add("5")).toBe(5)
 	})
+
+	it("returns sum of two comma-separated numbers", () => {
+		expect(add("1,2")).toBe(3)
+	})
 })
