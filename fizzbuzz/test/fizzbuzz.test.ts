@@ -10,7 +10,11 @@ describe("fizzbuzz", () => {
 		expect(fizzbuzz(3)).toBe("Fizz")
 	})
 
-    it("returns Buzz for 5", () => {
-        expect(fizzbuzz(5)).toBe("Buzz");
-    });
+	it("returns Buzz for 5", () => {
+		expect(fizzbuzz(5)).toBe("Buzz")
+	})
+
+	it("returns FizzBuzz for 15", () => {
+		expect(fizzbuzz(15)).toBe("FizzBuzz")
+	})
 })
