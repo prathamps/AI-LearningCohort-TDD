@@ -28,4 +28,9 @@ describe("add", () => {
 		expect(add("//;\n1;2")).toBe(3)
 		expect(add("//|\n3|4")).toBe(7)
 	})
+
+	it("throws for negative numbers listing all negatives in message", () => {
+		expect(() => add("1,-2,3")).toThrow("negatives not allowed: -2")
+		expect(() => add("-1,-2,3")).toThrow("negatives not allowed: -1,-2")
+	})
 })

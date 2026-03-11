@@ -13,5 +13,11 @@ export function add(numbers: string): number {
 		body = numbers.slice(headerEnd + 1)
 	}
 
-	return body.split(delimiter).reduce((sum, n) => sum + parseInt(n, 10), 0)
+	const parsed = body.split(delimiter).map((n) => parseInt(n, 10))
+	const negatives = parsed.filter((n) => n < 0)
+	if (negatives.length > 0) {
+		throw new Error(`negatives not allowed: ${negatives.join(",")}`)
+	}
+
+	return parsed.reduce((sum, n) => sum + n, 0)
 }
