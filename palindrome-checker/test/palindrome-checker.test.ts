@@ -22,4 +22,10 @@ describe("isPalindrome", () => {
 		expect(isPalindrome("world")).toBe(false)
 		expect(isPalindrome("abc")).toBe(false)
 	})
+
+	it("is case-insensitive", () => {
+		expect(isPalindrome("Racecar")).toBe(true)
+		expect(isPalindrome("Madam")).toBe(true)
+		expect(isPalindrome("ABA")).toBe(true)
+	})
 })
