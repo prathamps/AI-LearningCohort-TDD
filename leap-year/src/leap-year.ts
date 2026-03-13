@@ -1,3 +1,10 @@
+function isDivisibleBy(year: number, divisor: number): boolean {
+	return year % divisor === 0
+}
+
 export function isLeapYear(year: number): boolean {
-	return year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)
+	return (
+		isDivisibleBy(year, 400) ||
+		(isDivisibleBy(year, 4) && !isDivisibleBy(year, 100))
+	)
 }
