@@ -6,4 +6,9 @@ describe("isLeapYear", () => {
 		expect(isLeapYear(1996)).toBe(true)
 		expect(isLeapYear(2004)).toBe(true)
 	})
+
+	it("returns false for a year not divisible by 4", () => {
+		expect(isLeapYear(1997)).toBe(false)
+		expect(isLeapYear(2003)).toBe(false)
+	})
 })
