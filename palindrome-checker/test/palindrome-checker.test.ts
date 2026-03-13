@@ -28,4 +28,9 @@ describe("isPalindrome", () => {
 		expect(isPalindrome("Madam")).toBe(true)
 		expect(isPalindrome("ABA")).toBe(true)
 	})
+
+	it("ignores spaces", () => {
+		expect(isPalindrome("race car")).toBe(true)
+		expect(isPalindrome("never odd or even")).toBe(true)
+	})
 })
