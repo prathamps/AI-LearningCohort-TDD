@@ -1,3 +1,3 @@
-export function isLeapYear(_year: number): boolean {
-	throw new Error("not implemented")
+export function isLeapYear(year: number): boolean {
+	return year % 4 === 0
 }
