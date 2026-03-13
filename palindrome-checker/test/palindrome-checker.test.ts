@@ -33,4 +33,9 @@ describe("isPalindrome", () => {
 		expect(isPalindrome("race car")).toBe(true)
 		expect(isPalindrome("never odd or even")).toBe(true)
 	})
+
+	it("ignores punctuation", () => {
+		expect(isPalindrome("A man, a plan, a canal: Panama")).toBe(true)
+		expect(isPalindrome("Was it a car or a cat I saw?")).toBe(true)
+	})
 })
