@@ -11,4 +11,9 @@ describe("isLeapYear", () => {
 		expect(isLeapYear(1997)).toBe(false)
 		expect(isLeapYear(2003)).toBe(false)
 	})
+
+	it("returns false for century years (divisible by 100)", () => {
+		expect(isLeapYear(1900)).toBe(false)
+		expect(isLeapYear(1800)).toBe(false)
+	})
 })
